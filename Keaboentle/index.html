@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b79b7">
+  <meta name="description" content="KeaboEntle NPO — Lending a drop of HOPE. Community outreach and basic-needs support across communities in Gauteng, South Africa.">
+  <title>KeaboEntle NPO | Lending a drop of HOPE!</title>
+  <style>
+    :root {
+      --blue:#087db7; --blue2:#0b5e8c; --red:#c83b3d; --yellow:#f1c93b;
+      --ink:#172536; --muted:#5f7081; --paper:#fff; --soft:#f4f8fb; --line:#dbe6ee;
+      --shadow:0 18px 60px rgba(20,47,68,.12); --radius:24px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none} button,input{font:inherit} img{max-width:100%;display:block}
+    .container{width:min(1180px,calc(100% - 40px));margin:auto}
+    .topbar{background:var(--ink);color:#dfe9ef;font-size:13px;padding:8px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .topbar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(219,230,238,.9)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em}
+    .brand img{width:58px;height:50px;object-fit:contain;border-radius:10px}
+    .brand-text{font-size:22px} .brand-text span{color:var(--blue)} .brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-top:-3px}
+    .navlinks{display:flex;align-items:center;gap:27px;font-size:14px;font-weight:700;color:#405466}
+    .navlinks a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:13px 20px;font-weight:850;font-size:13px;cursor:pointer;transition:.2s transform,.2s box-shadow,.2s background}
+    .btn:hover{transform:translateY(-2px)} .btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 25px rgba(200,59,61,.22)} .btn-primary:hover{background:#ae2f32}
+    .btn-blue{background:var(--blue);color:#fff;box-shadow:0 10px 25px rgba(8,125,183,.2)} .btn-light{background:#fff;color:var(--ink);border:1px solid #d8e5ed}
+    .menu-btn{display:none;background:none;border:0;padding:8px} .menu-btn svg{width:25px;height:25px}
+    .hero{min-height:720px;display:grid;place-items:center;position:relative;overflow:hidden;background:#0e2c3f;color:#fff}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,24,37,.93) 0%,rgba(5,24,37,.70) 48%,rgba(5,24,37,.35) 100%),linear-gradient(0deg,rgba(5,24,37,.6),transparent 45%);z-index:1}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:saturate(.9)}
+    .hero-content{position:relative;z-index:2;padding:100px 0 85px;max-width:820px;margin-left:0}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:900;padding:8px 13px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.1);margin-bottom:24px}
+    .eyebrow .dot{width:7px;height:7px;background:var(--yellow);border-radius:50%}
+    h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.065em;margin:0 0 24px;font-weight:950;max-width:850px}
+    .hero p{font-size:clamp(17px,2vw,21px);max-width:680px;color:#e2edf3;margin:0 0 34px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero .btn-light{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:#fff;backdrop-filter:blur(8px)}
+    .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:80px;background:rgba(255,255,255,.2);border-radius:18px;overflow:hidden}
+    .hero-stat{padding:18px 20px;background:rgba(6,28,43,.58);backdrop-filter:blur(8px)} .hero-stat strong{display:block;font-size:19px} .hero-stat span{display:block;color:#b9ccd8;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:750;margin-top:4px}
+    section{padding:100px 0} .section-kicker{color:var(--blue);font-size:12px;text-transform:uppercase;letter-spacing:.17em;font-weight:950;margin-bottom:13px}
+    h2{font-size:clamp(34px,5vw,58px);line-height:1.02;letter-spacing:-.05em;margin:0 0 20px;font-weight:950} .lead{font-size:18px;color:var(--muted);max-width:720px}
+    .mission{background:var(--soft)} .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .quote{border-left:4px solid var(--yellow);padding-left:25px;font-size:clamp(23px,3vw,35px);line-height:1.25;font-weight:850;letter-spacing:-.025em}
+    .quote cite{display:block;font-size:12px;color:var(--muted);font-style:normal;text-transform:uppercase;letter-spacing:.12em;margin-top:16px}
+    .values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:48px}
+    .value{padding:26px 20px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 8px 30px rgba(20,47,68,.05);min-height:220px;transition:.25s}
+    .value:hover{transform:translateY(-5px);box-shadow:var(--shadow)} .icon{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:#e9f7fd;color:var(--blue);margin-bottom:25px} .icon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .value h3{margin:0 0 8px;font-size:20px} .value p{margin:0;color:var(--muted);font-size:14px}
+    .impact{background:#0d2231;color:#fff} .impact .section-kicker{color:var(--yellow)} .impact .lead{color:#bcd0dc}
+    .impact-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px} .filter{border:1px solid #345366;background:transparent;color:#bdd0dc;padding:9px 14px;border-radius:999px;font-weight:800;font-size:12px;cursor:pointer} .filter.active,.filter:hover{background:#fff;color:var(--ink);border-color:#fff}
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:13px} .card-photo{position:relative;overflow:hidden;border-radius:18px;aspect-ratio:1/1;cursor:pointer;background:#18384b} .card-photo:nth-child(5n+1){aspect-ratio:1/1.15} .card-photo img{width:100%;height:100%;object-fit:cover;transition:.45s transform} .card-photo:hover img{transform:scale(1.06)} .photo-overlay{position:absolute;inset:auto 0 0;padding:45px 14px 13px;background:linear-gradient(transparent,rgba(0,0,0,.82));font-size:12px;font-weight:800} .photo-overlay span{display:block;color:#bfe5f5;font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:2px}
+    .support{background:#fff} .support-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:stretch} .support-card{border:1px solid var(--line);border-radius:28px;padding:35px;background:var(--soft)} .support-card.dark{background:var(--ink);color:#fff;border-color:var(--ink)} .support-list{display:grid;gap:12px;margin:26px 0} .support-item{display:flex;gap:14px;align-items:flex-start;padding:16px;background:#fff;border:1px solid var(--line);border-radius:17px} .support-item strong{display:block} .support-item small{color:var(--muted)} .support-card.dark .support-item{background:#223a4a;border-color:#345265} .support-card.dark .support-item small{color:#b7cbd6}
+    .transparency{background:var(--soft)} .trust-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:25px} .trust-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px} .reg{font-size:32px;font-weight:950;letter-spacing:-.04em} .warning{margin-top:18px;border-left:4px solid var(--red);background:#fff4f4;padding:16px 18px;border-radius:12px;color:#6f3030;font-size:13px} .details{display:grid;gap:13px;margin-top:20px} .detail{display:flex;gap:12px;align-items:flex-start} .detail svg{width:19px;height:19px;flex:none;margin-top:2px;fill:none;stroke:var(--blue);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round} .detail strong{display:block} .detail span{color:var(--muted)}
+    footer{background:#091722;color:#c5d5de;padding:60px 0 25px} .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:40px} footer h3{color:#fff;margin:0 0 14px} footer p{margin:0;color:#9fb4c0;font-size:14px} footer a:hover{color:#fff} .footer-bottom{border-top:1px solid #203442;margin-top:40px;padding-top:20px;font-size:12px;color:#78909d;display:flex;justify-content:space-between;gap:20px}
+    .modal{position:fixed;inset:0;background:rgba(3,15,23,.85);backdrop-filter:blur(12px);display:none;place-items:center;z-index:100;padding:20px} .modal.open{display:grid} .modal-inner{width:min(760px,100%);background:#fff;border-radius:25px;overflow:hidden;position:relative;box-shadow:0 30px 100px rgba(0,0,0,.4)} .modal-inner img{width:100%;max-height:65vh;object-fit:contain;background:#0b1c27} .modal-caption{padding:18px 22px} .modal-caption strong{display:block;font-size:18px} .modal-caption span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em} .close{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(0,0,0,.5);color:#fff;display:grid;place-items:center;cursor:pointer;z-index:2} .close svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+    .toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:13px 17px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:120;font-size:13px} .toast.show{display:block}
+    .reveal{opacity:0;transform:translateY(20px);transition:.7s cubic-bezier(.16,1,.3,1)} .reveal.visible{opacity:1;transform:none}
+    @media(max-width:980px){.navlinks{display:none}.menu-btn{display:block}.navlinks.mobile-open{display:flex;position:absolute;left:20px;right:20px;top:70px;background:#fff;padding:20px;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:14px}.values-grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}.mission-grid,.support-grid,.trust-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:650px){.container{width:min(100% - 28px,1180px)}.topbar .container{justify-content:center}.topbar span{display:none}nav{height:68px}.brand img{width:50px;height:44px}.brand-text{font-size:19px}.hero{min-height:760px}.hero-content{padding:80px 0 55px}.hero-stats{grid-template-columns:1fr 1fr;margin-top:50px}.hero-stat{padding:14px}.hero-stat strong{font-size:16px}section{padding:75px 0}.mission-grid{gap:35px}.values-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr);gap:9px}.card-photo{border-radius:13px}.impact-head{display:block}.footer-grid{grid-template-columns:1fr}.footer-bottom{display:block}.footer-bottom div+div{margin-top:8px}h1{font-size:48px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>KeaboEntle NPO · Mailula Park, Vosloorus</span><a href="mailto:keaboentlenpo@gmail.com">keaboentlenpo@gmail.com</a></div></div>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top" aria-label="KeaboEntle home">
+          <img src="assets/logo.jpg" alt="KeaboEntle logo">
+          <div><div class="brand-text">Keabo<span>Entle</span></div><small>Lending a drop of HOPE!</small></div>
+        </a>
+        <div class="navlinks" id="navlinks">
+          <a href="#mission">Our Mission</a><a href="#values">Core Values</a><a href="#impact">Our Impact</a><a href="#support">How to Help</a>
+          <a class="btn btn-primary" href="#support">Support Us <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 10.2-8.8 10.2S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg></a>
+        </div>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-bg" src="assets/hero.jpg" alt="KeaboEntle community outreach at Kultwanong Primary School in Vosloorus">
+      <div class="container hero-content">
+        <div class="eyebrow"><span class="dot"></span> Lending a drop of HOPE!</div>
+        <h1>Small acts of support can reach a whole community.</h1>
+        <p>KeaboEntle's mission is to respond to disadvantaged communities' requests for donations and lend a hand with basic needs.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#support">How you can help <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          <a class="btn btn-light" href="#impact">See our outreach</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>2019</strong><span>Organisation registration year</span></div>
+          <div class="hero-stat"><strong>4+ areas</strong><span>Vosloorus · Katlehong · Tsakane · Daveyton</span></div>
+          <div class="hero-stat"><strong>Schools</strong><span>Community outreach</span></div>
+          <div class="hero-stat"><strong>Home visits</strong><span>Direct community support</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="mission">
+      <div class="container mission-grid">
+        <div class="reveal">
+          <div class="section-kicker">Our mission</div>
+          <h2>A token of HOPE to disadvantaged communities.</h2>
+          <p class="lead">The organisation's stated mission is to respond timeously to requests for donations, help alleviate poverty, and provide basic needs to people who need support.</p>
+          <p class="lead">Its profile describes its vision as being a token of “HOPE” to disadvantaged communities in South Africa.</p>
+        </div>
+        <div class="reveal">
+          <div class="quote">“Charity brings to life again those who are spiritually dead”<cite>Thomas Aquinas · quoted in the KeaboEntle NPO profile</cite></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="values">
+      <div class="container">
+        <div class="section-kicker">What guides us</div>
+        <h2>Five values. One purpose.</h2>
+        <p class="lead">These are the five core values stated in the organisation's NPO profile.</p>
+        <div class="values-grid">
+          <article class="value reveal"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5.6c0 5-3.4 8.1-8 9.4-4.6-1.3-8-4.4-8-9.4V6l8-3Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></div><h3>Integrity</h3><p>Carry our work with responsibility and accountability.</p></article>
+          <article class="value reveal"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></div><h3>Hope</h3><p>Resuscitate faith.</p></article>
+          <article class="value reveal"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 10.2-8.8 10.2S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg></div><h3>Respect</h3><p>Serve with consideration of the feelings, wishes or rights of others.</p></article>
+          <article class="value reveal"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 13.5 4 10l-1.5 1.5 5.8 6.1a2 2 0 0 0 2.8.1l2-1.9 2.7 2.2a2 2 0 0 0 2.7-.1l2-2.1-6.8-6.8a2.2 2.2 0 0 0-3.1 0l-2.1 2.1Z"/><path d="M10 9.5 7.8 7.3a2.2 2.2 0 0 1 3.1-3.1l3 3m-1.2 4.3 2.2-2.2a2.2 2.2 0 0 1 3.1 0"/></svg></div><h3>Support</h3><p>Holding hands in time of need.</p></article>
+          <article class="value reveal"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 10.2-8.8 10.2S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg></div><h3>Passion</h3><p>Serve with love.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="impact">
+      <div class="container">
+        <div class="impact-head">
+          <div><div class="section-kicker">Proof from the field</div><h2>Our community outreach.</h2><p class="lead">A living gallery built from the community activity photographs included in the KeaboEntle profile.</p></div>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <section id="support" class="support">
+      <div class="container">
+        <div class="section-kicker">Take part</div><h2>There is more than one way to lend a hand.</h2>
+        <p class="lead">The supplied profile describes donation-focused community work. This site keeps the support journey simple and transparent rather than inventing payment details that were not supplied.</p>
+        <div class="support-grid" style="margin-top:38px">
+          <div class="support-card reveal">
+            <h3>Ways to support KeaboEntle</h3>
+            <div class="support-list">
+              <div class="support-item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 10.2-8.8 10.2S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg></div><div><strong>Donate basic necessities</strong><small>Contact the organisation to coordinate goods or supplies for community outreach.</small></div></div>
+              <div class="support-item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 13.5 4 10l-1.5 1.5 5.8 6.1a2 2 0 0 0 2.8.1l2-1.9 2.7 2.2a2 2 0 0 0 2.7-.1l2-2.1-6.8-6.8a2.2 2.2 0 0 0-3.1 0l-2.1 2.1Z"/><path d="M10 9.5 7.8 7.3a2.2 2.2 0 0 1 3.1-3.1l3 3m-1.2 4.3 2.2-2.2a2.2 2.2 0 0 1 3.1 0"/></svg></div><div><strong>Partner with an outreach activity</strong><small>Schools, community groups and businesses can discuss practical support.</small></div></div>
+              <div class="support-item"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8S5.5 10.2 5.5 14.8a6.5 6.5 0 0 0 13 0C18.5 10.2 12 2.8 12 2.8Z"/></svg></div><div><strong>Financial support</strong><small>Request the current verified payment/banking details directly from KeaboEntle before sending funds.</small></div></div>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-blue" href="https://wa.me/27739446784?text=Hello%20KeaboEntle%2C%20I%20would%20like%20to%20support%20your%20community%20outreach." target="_blank" rel="noopener">WhatsApp KeaboEntle</a>
+              <a class="btn btn-light" href="mailto:keaboentlenpo@gmail.com?subject=KeaboEntle%20Support%20Enquiry">Email the NPO</a>
+            </div>
+          </div>
+          <div class="support-card dark reveal">
+            <div class="section-kicker" style="color:#f1c93b">Together we can do more</div>
+            <h3 style="font-size:32px;line-height:1.1;margin:0 0 14px">A simple next step can become someone else's hope.</h3>
+            <p style="color:#b7cbd6">If you want to contribute, volunteer or discuss an outreach partnership, get in touch using the verified contact details supplied in the organisation's profile.</p>
+            <div class="details">
+              <a class="detail" href="tel:+27739446784"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5 9 3l2 5-2.5 1.7a14.3 14.3 0 0 0 5.3 5.3l1.7-2.5 5 2 .5 2.5c.3 1.6-1 3-2.6 3C11 19.8 4.2 13 3 5.6c-.3-1.6 1.1-2.9 2.5-2.1Z"/></svg><div><strong>073 944 6784</strong><span>Primary contact</span></div></a>
+              <a class="detail" href="tel:+27680074459"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5 9 3l2 5-2.5 1.7a14.3 14.3 0 0 0 5.3 5.3l1.7-2.5 5 2 .5 2.5c.3 1.6-1 3-2.6 3C11 19.8 4.2 13 3 5.6c-.3-1.6 1.1-2.9 2.5-2.1Z"/></svg><div><strong>068 007 4459</strong><span>Alternative contact</span></div></a>
+              <a class="detail" href="mailto:keaboentlenpo@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="m4 7 8 6 8-6"/></svg><div><strong>keaboentlenpo@gmail.com</strong><span>Email</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="transparency">
+      <div class="container">
+        <div class="section-kicker">Trust & transparency</div>
+        <h2>Show people who they are supporting.</h2>
+        <div class="trust-grid" style="margin-top:35px">
+          <div class="trust-box reveal">
+            <h3>Organisation details</h3>
+            <p style="color:var(--muted)">The supplied NPO profile identifies the organisation as KeaboEntle NPO and gives the following registration number and address.</p>
+            <div class="reg">2019/564302/08</div>
+            <div class="details">
+              <div class="detail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8S5.5 10.2 5.5 14.8a6.5 6.5 0 0 0 13 0C18.5 10.2 12 2.8 12 2.8Z"/></svg><div><strong>Registered address</strong><span>174 Amalahle Crescent, Mailula Park Ext 3, Vosloorus</span></div></div>
+              <div class="detail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5 9 3l2 5-2.5 1.7a14.3 14.3 0 0 0 5.3 5.3l1.7-2.5 5 2 .5 2.5c.3 1.6-1 3-2.6 3C11 19.8 4.2 13 3 5.6c-.3-1.6 1.1-2.9 2.5-2.1Z"/></svg><div><strong>Contact</strong><span>073 944 6784 / 068 007 4459</span></div></div>
+              <div class="detail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="m4 7 8 6 8-6"/></svg><div><strong>Email</strong><span>keaboentlenpo@gmail.com</span></div></div>
+            </div>
+          </div>
+          <div class="trust-box reveal">
+            <h3>Important verification note</h3>
+            <p style="color:var(--muted)">The COR39 document supplied with the project shows the enterprise status as <strong>“AR Deregistration Process”</strong>. The website therefore does not label the organisation as an “active NPC” or make a claim that this status has been cleared.</p>
+            <div class="warning">Before the public launch or accepting online donations, update this section with the latest official registration/status evidence and the organisation's verified banking or payment information.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>KeaboEntle</h3><p>Lending a drop of HOPE!<br>Community-focused support for disadvantaged communities.</p></div>
+        <div><h3>Explore</h3><p><a href="#mission">Our Mission</a><br><a href="#values">Core Values</a><br><a href="#impact">Outreach Gallery</a><br><a href="#support">How to Help</a></p></div>
+        <div><h3>Contact</h3><p><a href="tel:+27739446784">073 944 6784</a><br><a href="tel:+27680074459">068 007 4459</a><br><a href="mailto:keaboentlenpo@gmail.com">keaboentlenpo@gmail.com</a><br>Mailula Park Ext 3, Vosloorus</p></div>
+      </div>
+      <div class="footer-bottom"><div>© 2026 KeaboEntle NPO. All rights reserved.</div><div>Registration no. 2019/564302/08 · Verify current status before launch.</div></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Gallery image">
+    <div class="modal-inner">
+      <button class="close" id="closeModal" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <img id="modalImg" src="" alt="">
+      <div class="modal-caption"><strong id="modalTitle"></strong><span id="modalRegion"></span></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const galleryData = [{"src": "assets/gallery-01.jpg", "title": "Community outreach", "region": "Vosloorus"}, {"src": "assets/gallery-02.jpg", "title": "Donation preparation", "region": "Vosloorus"}, {"src": "assets/gallery-03.jpg", "title": "Community distribution", "region": "Vosloorus"}, {"src": "assets/gallery-04.jpg", "title": "Clothing support", "region": "Vosloorus"}, {"src": "assets/gallery-05.jpg", "title": "Clothing support", "region": "Vosloorus"}, {"src": "assets/gallery-06.jpg", "title": "Donation supplies", "region": "Vosloorus"}, {"src": "assets/gallery-07.jpg", "title": "Community support", "region": "Vosloorus"}, {"src": "assets/gallery-08.jpg", "title": "Donation collection", "region": "Vosloorus"}, {"src": "assets/gallery-09.jpg", "title": "School outreach", "region": "Daveyton"}, {"src": "assets/gallery-10.jpg", "title": "Community outreach", "region": "Vosloorus"}, {"src": "assets/gallery-11.jpg", "title": "School outreach", "region": "Tsakane"}, {"src": "assets/gallery-12.jpg", "title": "Community visit", "region": "Vosloorus"}, {"src": "assets/gallery-13.jpg", "title": "Old age home outreach", "region": "Germiston"}, {"src": "assets/gallery-14.jpg", "title": "Old age home outreach", "region": "Germiston"}, {"src": "assets/gallery-15.jpg", "title": "Home visit", "region": "Home Visits"}, {"src": "assets/gallery-16.jpg", "title": "School outreach", "region": "Vosloorus"}, {"src": "assets/gallery-17.jpg", "title": "Primary school outreach", "region": "Wattville"}, {"src": "assets/gallery-18.jpg", "title": "Primary school outreach", "region": "Vosloorus"}, {"src": "assets/gallery-19.jpg", "title": "School outreach", "region": "Tsakane"}, {"src": "assets/gallery-20.jpg", "title": "Primary school outreach", "region": "Vosloorus"}, {"src": "assets/gallery-21.jpg", "title": "School/community outreach", "region": "Vosloorus"}, {"src": "assets/gallery-22.jpg", "title": "Primary school outreach", "region": "Katlehong"}, {"src": "assets/gallery-23.jpg", "title": "Community support", "region": "Vosloorus"}, {"src": "assets/gallery-24.jpg", "title": "Kultwanong Primary School", "region": "Vosloorus"}, {"src": "assets/gallery-25.jpg", "title": "Home visit", "region": "Katlehong"}, {"src": "assets/gallery-26.jpg", "title": "Home/community visit", "region": "Community"}, {"src": "assets/gallery-27.jpg", "title": "Home/community visit", "region": "Community"}, {"src": "assets/gallery-28.jpg", "title": "Community outreach", "region": "Community"}, {"src": "assets/gallery-29.jpg", "title": "Community support", "region": "Community"}, {"src": "assets/gallery-30.jpg", "title": "KeaboEntle outreach", "region": "Vosloorus"}, {"src": "assets/gallery-31.jpg", "title": "Home visit", "region": "Community"}, {"src": "assets/gallery-32.jpg", "title": "Home/community visit", "region": "Community"}, {"src": "assets/gallery-33.jpg", "title": "Community visit", "region": "Community"}, {"src": "assets/gallery-34.jpg", "title": "Community visit", "region": "Community"}, {"src": "assets/gallery-35.jpg", "title": "Community outreach", "region": "Community"}];
+    const gallery = document.getElementById('gallery');
+    const filters = document.getElementById('filters');
+    const regions = ['All', ...new Set(galleryData.map(x => x.region))];
+
+    function renderFilters() {
+      filters.innerHTML = regions.map((r,i) => `<button class="filter ${i===0?'active':''}" data-region="${r}">${r}</button>`).join('');
+      filters.querySelectorAll('.filter').forEach(btn => btn.addEventListener('click', () => {
+        filters.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderGallery(btn.dataset.region);
+      }));
+    }
+    function renderGallery(region='All') {
+      const items = region==='All' ? galleryData : galleryData.filter(x => x.region===region);
+      gallery.innerHTML = items.map((x,i) => `<button class="card-photo" data-index="${galleryData.indexOf(x)}" aria-label="Open ${x.title}"><img loading="lazy" src="${x.src}" alt="${x.title} — ${x.region}" /><span class="photo-overlay">${x.title}<span>${x.region}</span></span></button>`).join('');
+      gallery.querySelectorAll('.card-photo').forEach(btn => btn.addEventListener('click', () => openModal(Number(btn.dataset.index))));
+    }
+    const modal=document.getElementById('modal'), modalImg=document.getElementById('modalImg'), modalTitle=document.getElementById('modalTitle'), modalRegion=document.getElementById('modalRegion');
+    function openModal(i) { const x=galleryData[i]; modalImg.src=x.src; modalImg.alt=x.title; modalTitle.textContent=x.title; modalRegion.textContent=x.region; modal.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeModal() { modal.classList.remove('open'); document.body.style.overflow=''; }
+    document.getElementById('closeModal').addEventListener('click',closeModal); modal.addEventListener('click',e=>{if(e.target===modal)closeModal()}); document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+    renderFilters(); renderGallery();
+
+    const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navlinks');
+    menuBtn.addEventListener('click',()=>nav.classList.toggle('mobile-open'));
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('mobile-open')));
+
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
